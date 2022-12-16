@@ -36,3 +36,15 @@ public Map<String, String> onGroupEnd(Group<T> group) {
 ```
 
 Stampling exactly does that marking. See code for more details of realization.  
+
+## Task 2
+In second task we scrap information from link of website https://www.newhomesource.com/.  
+Since it uses ld-json, we can use it to get all information about houses without the need to store entire html.  
+In order to avoid multiple requests to the same link, we save all links in cache database.
+
+Example of how cache db speeds up program:  
+- no cache db: Time took to parse web link: 4792ms
+- with cache db: Time took to parse web link: 1ms
+
+**ATTENTION - sql injections possible**
+
